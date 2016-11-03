@@ -1,6 +1,6 @@
 ﻿namespace ControleFaculdade
 {
-    partial class FormADD
+    partial class FormAddAtividade
     {
         /// <summary>
         /// Required designer variable.
@@ -28,44 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAddAtividade = new System.Windows.Forms.Button();
-            this.btnAddMateria = new System.Windows.Forms.Button();
+            this.txtNomeDaAtividade = new System.Windows.Forms.TextBox();
+            this.lblNomeDaAtividade = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnAddAtividade
+            // txtNomeDaAtividade
             // 
-            this.btnAddAtividade.Location = new System.Drawing.Point(292, 119);
-            this.btnAddAtividade.Name = "btnAddAtividade";
-            this.btnAddAtividade.Size = new System.Drawing.Size(118, 54);
-            this.btnAddAtividade.TabIndex = 3;
-            this.btnAddAtividade.Text = "Atividade";
-            this.btnAddAtividade.UseVisualStyleBackColor = true;
+            this.txtNomeDaAtividade.Location = new System.Drawing.Point(32, 50);
+            this.txtNomeDaAtividade.Name = "txtNomeDaAtividade";
+            this.txtNomeDaAtividade.Size = new System.Drawing.Size(444, 20);
+            this.txtNomeDaAtividade.TabIndex = 3;
             // 
-            // btnAddMateria
+            // lblNomeDaAtividade
             // 
-            this.btnAddMateria.Location = new System.Drawing.Point(79, 119);
-            this.btnAddMateria.Name = "btnAddMateria";
-            this.btnAddMateria.Size = new System.Drawing.Size(118, 54);
-            this.btnAddMateria.TabIndex = 2;
-            this.btnAddMateria.Text = "Matéria";
-            this.btnAddMateria.UseVisualStyleBackColor = true;
+            this.lblNomeDaAtividade.AutoSize = true;
+            this.lblNomeDaAtividade.Location = new System.Drawing.Point(29, 33);
+            this.lblNomeDaAtividade.Name = "lblNomeDaAtividade";
+            this.lblNomeDaAtividade.Size = new System.Drawing.Size(102, 13);
+            this.lblNomeDaAtividade.TabIndex = 2;
+            this.lblNomeDaAtividade.Text = "Nome Da Atividade:";
             // 
-            // FormADD
+            // FormAddAtividade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 293);
-            this.Controls.Add(this.btnAddAtividade);
-            this.Controls.Add(this.btnAddMateria);
-            this.Name = "FormADD";
-            this.Text = "FormADD";
+            this.Controls.Add(this.txtNomeDaAtividade);
+            this.Controls.Add(this.lblNomeDaAtividade);
+            this.Name = "FormAddAtividade";
+            this.Text = "FormAddAtividade";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnAddAtividade;
-        private System.Windows.Forms.Button btnAddMateria;
+        private System.Windows.Forms.TextBox txtNomeDaAtividade;
+        private System.Windows.Forms.Label lblNomeDaAtividade;
     }
 }
