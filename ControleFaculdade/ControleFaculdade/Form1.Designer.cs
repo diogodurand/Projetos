@@ -59,7 +59,7 @@
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.btnAdicionar);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Controle de Atividades Faculdade";
             this.ResumeLayout(false);
 
         }

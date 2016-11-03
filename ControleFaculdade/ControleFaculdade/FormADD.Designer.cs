@@ -30,6 +30,7 @@
         {
             this.btnAddAtividade = new System.Windows.Forms.Button();
             this.btnAddMateria = new System.Windows.Forms.Button();
+            this.btnVolta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAddAtividade
@@ -50,15 +51,25 @@
             this.btnAddMateria.Text = "Matéria";
             this.btnAddMateria.UseVisualStyleBackColor = true;
             // 
+            // btnVolta
+            // 
+            this.btnVolta.Location = new System.Drawing.Point(401, 258);
+            this.btnVolta.Name = "btnVolta";
+            this.btnVolta.Size = new System.Drawing.Size(75, 23);
+            this.btnVolta.TabIndex = 4;
+            this.btnVolta.Text = "Voltar";
+            this.btnVolta.UseVisualStyleBackColor = true;
+            // 
             // FormADD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 293);
+            this.Controls.Add(this.btnVolta);
             this.Controls.Add(this.btnAddAtividade);
             this.Controls.Add(this.btnAddMateria);
             this.Name = "FormADD";
-            this.Text = "FormADD";
+            this.Text = "Adicionar Materia/Atividade";
             this.ResumeLayout(false);
 
         }
@@ -67,5 +78,6 @@
 
         private System.Windows.Forms.Button btnAddAtividade;
         private System.Windows.Forms.Button btnAddMateria;
+        private System.Windows.Forms.Button btnVolta;
     }
 }

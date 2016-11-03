@@ -78,7 +78,7 @@
             this.Controls.Add(this.txtNomeDaMateria);
             this.Controls.Add(this.lblNomeDaMateria);
             this.Name = "FormAddMateria";
-            this.Text = "FormAddMateria";
+            this.Text = "Adicionar Nova Matéria";
             this.ResumeLayout(false);
             this.PerformLayout();
 

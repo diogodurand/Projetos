@@ -34,6 +34,8 @@
             this.dtDataEntrega = new System.Windows.Forms.DateTimePicker();
             this.lblDescricaoDaAtividade = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnOk = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNomeDaAtividade
@@ -87,11 +89,31 @@
             this.textBox1.Size = new System.Drawing.Size(222, 106);
             this.textBox1.TabIndex = 7;
             // 
+            // btnOk
+            // 
+            this.btnOk.Location = new System.Drawing.Point(320, 258);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(75, 23);
+            this.btnOk.TabIndex = 9;
+            this.btnOk.Text = "OK";
+            this.btnOk.UseVisualStyleBackColor = true;
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Location = new System.Drawing.Point(401, 258);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(75, 23);
+            this.btnVoltar.TabIndex = 8;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            // 
             // FormAddAtividade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 293);
+            this.Controls.Add(this.btnOk);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblDescricaoDaAtividade);
             this.Controls.Add(this.dtDataEntrega);
@@ -99,7 +121,7 @@
             this.Controls.Add(this.txtNomeDaAtividade);
             this.Controls.Add(this.lblNomeDaAtividade);
             this.Name = "FormAddAtividade";
-            this.Text = "FormAddAtividade";
+            this.Text = "Adicionar Nova Atividade";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,5 +135,7 @@
         private System.Windows.Forms.DateTimePicker dtDataEntrega;
         private System.Windows.Forms.Label lblDescricaoDaAtividade;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }
