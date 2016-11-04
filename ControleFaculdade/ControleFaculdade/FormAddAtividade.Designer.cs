@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtNomeDaAtividade = new System.Windows.Forms.TextBox();
             this.lblNomeDaAtividade = new System.Windows.Forms.Label();
             this.lblDataEntrega = new System.Windows.Forms.Label();
@@ -38,6 +39,11 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.lblMateria = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.sampleDataBaseDataSet = new ControleFaculdade.SampleDataBaseDataSet();
+            this.tblMateriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblMateriaTableAdapter = new ControleFaculdade.SampleDataBaseDataSetTableAdapters.tblMateriaTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataBaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblMateriaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNomeDaAtividade
@@ -122,11 +128,27 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.tblMateriaBindingSource;
+            this.comboBox1.DisplayMember = "NOME_MATERIA";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(80, 20);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(173, 21);
             this.comboBox1.TabIndex = 11;
+            // 
+            // sampleDataBaseDataSet
+            // 
+            this.sampleDataBaseDataSet.DataSetName = "SampleDataBaseDataSet";
+            this.sampleDataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblMateriaBindingSource
+            // 
+            this.tblMateriaBindingSource.DataMember = "tblMateria";
+            this.tblMateriaBindingSource.DataSource = this.sampleDataBaseDataSet;
+            // 
+            // tblMateriaTableAdapter
+            // 
+            this.tblMateriaTableAdapter.ClearBeforeFill = true;
             // 
             // FormAddAtividade
             // 
@@ -146,6 +168,9 @@
             this.Name = "FormAddAtividade";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adicionar Nova Atividade";
+            this.Load += new System.EventHandler(this.FormAddAtividade_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataBaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblMateriaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,5 +188,8 @@
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Label lblMateria;
         private System.Windows.Forms.ComboBox comboBox1;
+        private SampleDataBaseDataSet sampleDataBaseDataSet;
+        private System.Windows.Forms.BindingSource tblMateriaBindingSource;
+        private SampleDataBaseDataSetTableAdapters.tblMateriaTableAdapter tblMateriaTableAdapter;
     }
 }
