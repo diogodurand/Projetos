@@ -34,16 +34,16 @@
             this.lblDataEntrega = new System.Windows.Forms.Label();
             this.dtDataEntrega = new System.Windows.Forms.DateTimePicker();
             this.lblDescricaoDaAtividade = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.boxDescAtividade = new System.Windows.Forms.TextBox();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.lblMateria = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.sampleDataBaseDataSet = new ControleFaculdade.SampleDataBaseDataSet();
+            this.comboMateria = new System.Windows.Forms.ComboBox();
             this.tblMateriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sampleDataBaseDataSet = new ControleFaculdade.SampleDataBaseDataSet();
             this.tblMateriaTableAdapter = new ControleFaculdade.SampleDataBaseDataSetTableAdapters.tblMateriaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleDataBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblMateriaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataBaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNomeDaAtividade
@@ -89,13 +89,13 @@
             this.lblDescricaoDaAtividade.TabIndex = 6;
             this.lblDescricaoDaAtividade.Text = "Descrição Da Atividade:";
             // 
-            // textBox1
+            // boxDescAtividade
             // 
-            this.textBox1.Location = new System.Drawing.Point(31, 120);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(222, 106);
-            this.textBox1.TabIndex = 7;
+            this.boxDescAtividade.Location = new System.Drawing.Point(31, 120);
+            this.boxDescAtividade.Multiline = true;
+            this.boxDescAtividade.Name = "boxDescAtividade";
+            this.boxDescAtividade.Size = new System.Drawing.Size(222, 106);
+            this.boxDescAtividade.TabIndex = 7;
             // 
             // btnOk
             // 
@@ -126,25 +126,26 @@
             this.lblMateria.TabIndex = 10;
             this.lblMateria.Text = "Materia:";
             // 
-            // comboBox1
+            // comboMateria
             // 
-            this.comboBox1.DataSource = this.tblMateriaBindingSource;
-            this.comboBox1.DisplayMember = "NOME_MATERIA";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(80, 20);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(173, 21);
-            this.comboBox1.TabIndex = 11;
-            // 
-            // sampleDataBaseDataSet
-            // 
-            this.sampleDataBaseDataSet.DataSetName = "SampleDataBaseDataSet";
-            this.sampleDataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.comboMateria.DataSource = this.tblMateriaBindingSource;
+            this.comboMateria.DisplayMember = "NOME_MATERIA";
+            this.comboMateria.FormattingEnabled = true;
+            this.comboMateria.Location = new System.Drawing.Point(80, 20);
+            this.comboMateria.Name = "comboMateria";
+            this.comboMateria.Size = new System.Drawing.Size(173, 21);
+            this.comboMateria.TabIndex = 11;
+            this.comboMateria.ValueMember = "Id";
             // 
             // tblMateriaBindingSource
             // 
             this.tblMateriaBindingSource.DataMember = "tblMateria";
             this.tblMateriaBindingSource.DataSource = this.sampleDataBaseDataSet;
+            // 
+            // sampleDataBaseDataSet
+            // 
+            this.sampleDataBaseDataSet.DataSetName = "SampleDataBaseDataSet";
+            this.sampleDataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tblMateriaTableAdapter
             // 
@@ -155,11 +156,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 293);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboMateria);
             this.Controls.Add(this.lblMateria);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.boxDescAtividade);
             this.Controls.Add(this.lblDescricaoDaAtividade);
             this.Controls.Add(this.dtDataEntrega);
             this.Controls.Add(this.lblDataEntrega);
@@ -169,8 +170,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adicionar Nova Atividade";
             this.Load += new System.EventHandler(this.FormAddAtividade_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.sampleDataBaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblMateriaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sampleDataBaseDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,11 +184,11 @@
         private System.Windows.Forms.Label lblDataEntrega;
         private System.Windows.Forms.DateTimePicker dtDataEntrega;
         private System.Windows.Forms.Label lblDescricaoDaAtividade;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox boxDescAtividade;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Label lblMateria;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboMateria;
         private SampleDataBaseDataSet sampleDataBaseDataSet;
         private System.Windows.Forms.BindingSource tblMateriaBindingSource;
         private SampleDataBaseDataSetTableAdapters.tblMateriaTableAdapter tblMateriaTableAdapter;
