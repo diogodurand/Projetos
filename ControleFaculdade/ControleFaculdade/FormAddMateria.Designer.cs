@@ -47,7 +47,7 @@
             // 
             this.txtNomeDaMateria.Location = new System.Drawing.Point(32, 50);
             this.txtNomeDaMateria.Name = "txtNomeDaMateria";
-            this.txtNomeDaMateria.Size = new System.Drawing.Size(444, 20);
+            this.txtNomeDaMateria.Size = new System.Drawing.Size(363, 20);
             this.txtNomeDaMateria.TabIndex = 1;
             // 
             // btnVoltar
@@ -58,6 +58,7 @@
             this.btnVoltar.TabIndex = 2;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnOk
             // 
@@ -67,6 +68,7 @@
             this.btnOk.TabIndex = 3;
             this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // FormAddMateria
             // 
@@ -78,6 +80,7 @@
             this.Controls.Add(this.txtNomeDaMateria);
             this.Controls.Add(this.lblNomeDaMateria);
             this.Name = "FormAddMateria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adicionar Nova Matéria";
             this.ResumeLayout(false);
             this.PerformLayout();

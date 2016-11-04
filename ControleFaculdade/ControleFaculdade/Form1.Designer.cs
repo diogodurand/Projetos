@@ -59,6 +59,7 @@
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.btnAdicionar);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Controle de Atividades Faculdade";
             this.ResumeLayout(false);
 

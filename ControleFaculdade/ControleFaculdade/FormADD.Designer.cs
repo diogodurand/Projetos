@@ -41,6 +41,7 @@
             this.btnAddAtividade.TabIndex = 3;
             this.btnAddAtividade.Text = "Atividade";
             this.btnAddAtividade.UseVisualStyleBackColor = true;
+            this.btnAddAtividade.Click += new System.EventHandler(this.btnAddAtividade_Click);
             // 
             // btnAddMateria
             // 
@@ -50,6 +51,7 @@
             this.btnAddMateria.TabIndex = 2;
             this.btnAddMateria.Text = "Matéria";
             this.btnAddMateria.UseVisualStyleBackColor = true;
+            this.btnAddMateria.Click += new System.EventHandler(this.btnAddMateria_Click);
             // 
             // btnVolta
             // 
@@ -59,6 +61,7 @@
             this.btnVolta.TabIndex = 4;
             this.btnVolta.Text = "Voltar";
             this.btnVolta.UseVisualStyleBackColor = true;
+            this.btnVolta.Click += new System.EventHandler(this.btnVolta_Click);
             // 
             // FormADD
             // 
@@ -69,7 +72,9 @@
             this.Controls.Add(this.btnAddAtividade);
             this.Controls.Add(this.btnAddMateria);
             this.Name = "FormADD";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adicionar Materia/Atividade";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormADD_FormClosing);
             this.ResumeLayout(false);
 
         }
