@@ -15,7 +15,7 @@ namespace ControleFaculdade
         public SqlCommand command;
         StringBuilder errorMessages = new StringBuilder();
         SqlDataReader retorno;
-        SqlTransaction transaction;
+        
 
         public SqlDataReader Select(string sql)
         {
@@ -58,7 +58,7 @@ namespace ControleFaculdade
             command.CommandText = sql;
             command.CommandType = CommandType.Text;
             command.Connection = bdConn;
-            command.Transaction = transaction;
+            
 
             try
             {
@@ -95,7 +95,7 @@ namespace ControleFaculdade
                 command.CommandText = sql;
                 command.CommandType = CommandType.Text;
                 command.Connection = bdConn;
-                command.Transaction = transaction;
+                
 
                 command.ExecuteNonQuery();
                 CloseConnection();

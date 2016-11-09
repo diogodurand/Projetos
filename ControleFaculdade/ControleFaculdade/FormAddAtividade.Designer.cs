@@ -200,10 +200,10 @@
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Label lblMateria;
         private System.Windows.Forms.ComboBox comboMateria;
-        private DBControleFaculdadeDataSet sampleDataBaseDataSet;
+        
         private System.Windows.Forms.BindingSource tblMateriaBindingSource;
-        private DBControleFaculdadeDataSetTableAdapters.tblMateriaTableAdapter tblMateriaTableAdapter;
-        private System.Windows.Forms.BindingSource sampleDataBaseDataSetBindingSource;
+        
+        
         private System.Windows.Forms.BindingSource dBControleFaculdadeDataSetBindingSource;
         private DBControleFaculdadeDataSet dBControleFaculdadeDataSet;
         private System.Windows.Forms.BindingSource tblMateriaBindingSource1;
