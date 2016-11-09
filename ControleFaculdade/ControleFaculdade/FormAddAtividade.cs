@@ -14,13 +14,13 @@ namespace ControleFaculdade
     public partial class FormAddAtividade : Form
     {
         public FormADD formAdd;
-        BDconnection conexao = new BDconnection();
+        BD BD = new BD();
         public string nomeAtividade;
         public string descAtividade;
         public string dataEntrega;
         public int idMateria;
         string sql;
-        SqlCommand command;
+        StringBuilder errorMessages = new StringBuilder();
 
         public FormAddAtividade(FormADD FormAdd)
         {
@@ -35,25 +35,16 @@ namespace ControleFaculdade
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            conexao.OpenConnection();
             nomeAtividade = txtNomeDaAtividade.Text.ToString();
             descAtividade = boxDescAtividade.Text.ToString();
             dataEntrega = dtDataEntrega.Text.ToString();
             idMateria = int.Parse(comboMateria.SelectedValue.ToString());
 
-            sql = "INSERT INTO SampleDataBaseDataSet VALUES " +
-                  "("+ idMateria + ",'" + nomeAtividade + "','" + descAtividade + "','" +dataEntrega+"')";
+            sql = "INSERT INTO tblAtividade"
+                + " (ID_MATERIA, NOME_ATIVIDADE, DESC_ATIVIDADE, DATA_ENTREGA)"
+                + " VALUES ("+ idMateria + ",'" + nomeAtividade + "','" + descAtividade + "','" + dataEntrega +"')";
 
-            command = new SqlCommand(sql, conexao.bdConn);
-
-            try
-            {
-
-            }
-            catch
-            {
-
-            }
+            BD.Insert(sql);            
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -65,8 +56,10 @@ namespace ControleFaculdade
 
         private void FormAddAtividade_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dBControleFaculdadeDataSet.tblMateria' table. You can move, or remove it, as needed.
+            this.tblMateriaTableAdapter1.Fill(this.dBControleFaculdadeDataSet.tblMateria);
             // TODO: This line of code loads data into the 'sampleDataBaseDataSet.tblMateria' table. You can move, or remove it, as needed.
-            this.tblMateriaTableAdapter.Fill(this.sampleDataBaseDataSet.tblMateria);
+
 
         }
     }

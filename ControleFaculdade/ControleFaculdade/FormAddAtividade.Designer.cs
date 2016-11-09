@@ -40,10 +40,14 @@
             this.lblMateria = new System.Windows.Forms.Label();
             this.comboMateria = new System.Windows.Forms.ComboBox();
             this.tblMateriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sampleDataBaseDataSet = new ControleFaculdade.SampleDataBaseDataSet();
-            this.tblMateriaTableAdapter = new ControleFaculdade.SampleDataBaseDataSetTableAdapters.tblMateriaTableAdapter();
+            this.dBControleFaculdadeDataSet = new ControleFaculdade.DBControleFaculdadeDataSet();
+            this.dBControleFaculdadeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblMateriaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblMateriaTableAdapter1 = new ControleFaculdade.DBControleFaculdadeDataSetTableAdapters.tblMateriaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tblMateriaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleDataBaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBControleFaculdadeDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBControleFaculdadeDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblMateriaBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNomeDaAtividade
@@ -128,28 +132,33 @@
             // 
             // comboMateria
             // 
-            this.comboMateria.DataSource = this.tblMateriaBindingSource;
+            this.comboMateria.DataSource = this.tblMateriaBindingSource1;
             this.comboMateria.DisplayMember = "NOME_MATERIA";
             this.comboMateria.FormattingEnabled = true;
             this.comboMateria.Location = new System.Drawing.Point(80, 20);
             this.comboMateria.Name = "comboMateria";
             this.comboMateria.Size = new System.Drawing.Size(173, 21);
             this.comboMateria.TabIndex = 11;
-            this.comboMateria.ValueMember = "Id";
+            this.comboMateria.ValueMember = "ID";
             // 
-            // tblMateriaBindingSource
+            // dBControleFaculdadeDataSet
             // 
-            this.tblMateriaBindingSource.DataMember = "tblMateria";
-            this.tblMateriaBindingSource.DataSource = this.sampleDataBaseDataSet;
+            this.dBControleFaculdadeDataSet.DataSetName = "DBControleFaculdadeDataSet";
+            this.dBControleFaculdadeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // sampleDataBaseDataSet
+            // dBControleFaculdadeDataSetBindingSource
             // 
-            this.sampleDataBaseDataSet.DataSetName = "SampleDataBaseDataSet";
-            this.sampleDataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dBControleFaculdadeDataSetBindingSource.DataSource = this.dBControleFaculdadeDataSet;
+            this.dBControleFaculdadeDataSetBindingSource.Position = 0;
             // 
-            // tblMateriaTableAdapter
+            // tblMateriaBindingSource1
             // 
-            this.tblMateriaTableAdapter.ClearBeforeFill = true;
+            this.tblMateriaBindingSource1.DataMember = "tblMateria";
+            this.tblMateriaBindingSource1.DataSource = this.dBControleFaculdadeDataSet;
+            // 
+            // tblMateriaTableAdapter1
+            // 
+            this.tblMateriaTableAdapter1.ClearBeforeFill = true;
             // 
             // FormAddAtividade
             // 
@@ -171,7 +180,9 @@
             this.Text = "Adicionar Nova Atividade";
             this.Load += new System.EventHandler(this.FormAddAtividade_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tblMateriaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sampleDataBaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBControleFaculdadeDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBControleFaculdadeDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblMateriaBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,8 +200,13 @@
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Label lblMateria;
         private System.Windows.Forms.ComboBox comboMateria;
-        private SampleDataBaseDataSet sampleDataBaseDataSet;
+        private DBControleFaculdadeDataSet sampleDataBaseDataSet;
         private System.Windows.Forms.BindingSource tblMateriaBindingSource;
-        private SampleDataBaseDataSetTableAdapters.tblMateriaTableAdapter tblMateriaTableAdapter;
+        private DBControleFaculdadeDataSetTableAdapters.tblMateriaTableAdapter tblMateriaTableAdapter;
+        private System.Windows.Forms.BindingSource sampleDataBaseDataSetBindingSource;
+        private System.Windows.Forms.BindingSource dBControleFaculdadeDataSetBindingSource;
+        private DBControleFaculdadeDataSet dBControleFaculdadeDataSet;
+        private System.Windows.Forms.BindingSource tblMateriaBindingSource1;
+        private DBControleFaculdadeDataSetTableAdapters.tblMateriaTableAdapter tblMateriaTableAdapter1;
     }
 }

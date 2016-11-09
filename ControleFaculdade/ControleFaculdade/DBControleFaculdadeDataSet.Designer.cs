@@ -20,9 +20,9 @@ namespace ControleFaculdade {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("SampleDataBaseDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DBControleFaculdadeDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class SampleDataBaseDataSet : global::System.Data.DataSet {
+    public partial class DBControleFaculdadeDataSet : global::System.Data.DataSet {
         
         private tblAtividadeDataTable tabletblAtividade;
         
@@ -32,7 +32,7 @@ namespace ControleFaculdade {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public SampleDataBaseDataSet() {
+        public DBControleFaculdadeDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -43,7 +43,7 @@ namespace ControleFaculdade {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected SampleDataBaseDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DBControleFaculdadeDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -142,7 +142,7 @@ namespace ControleFaculdade {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            SampleDataBaseDataSet cln = ((SampleDataBaseDataSet)(base.Clone()));
+            DBControleFaculdadeDataSet cln = ((DBControleFaculdadeDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -223,23 +223,15 @@ namespace ControleFaculdade {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "SampleDataBaseDataSet";
+            this.DataSetName = "DBControleFaculdadeDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/SampleDataBaseDataSet.xsd";
+            this.Namespace = "http://tempuri.org/DBControleFaculdadeDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tabletblAtividade = new tblAtividadeDataTable();
             base.Tables.Add(this.tabletblAtividade);
             this.tabletblMateria = new tblMateriaDataTable();
             base.Tables.Add(this.tabletblMateria);
-            global::System.Data.ForeignKeyConstraint fkc;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_tblMateria_tblAtividade", new global::System.Data.DataColumn[] {
-                        this.tabletblMateria.IdColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletblAtividade.ID_MATERIAColumn});
-            this.tabletblAtividade.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.Cascade;
-            fkc.UpdateRule = global::System.Data.Rule.Cascade;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -265,7 +257,7 @@ namespace ControleFaculdade {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            SampleDataBaseDataSet ds = new SampleDataBaseDataSet();
+            DBControleFaculdadeDataSet ds = new DBControleFaculdadeDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -489,9 +481,8 @@ namespace ControleFaculdade {
                                 this.columnID_MATERIA}, true));
                 this.columnID_MATERIA.AllowDBNull = false;
                 this.columnID_MATERIA.Unique = true;
-                this.columnNOME_ATIVIDADE.AllowDBNull = false;
-                this.columnNOME_ATIVIDADE.MaxLength = 30;
-                this.columnDESC_ATIVIDADE.MaxLength = 1073741823;
+                this.columnNOME_ATIVIDADE.MaxLength = 20;
+                this.columnDESC_ATIVIDADE.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -559,7 +550,7 @@ namespace ControleFaculdade {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SampleDataBaseDataSet ds = new SampleDataBaseDataSet();
+                DBControleFaculdadeDataSet ds = new DBControleFaculdadeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -625,7 +616,7 @@ namespace ControleFaculdade {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class tblMateriaDataTable : global::System.Data.TypedTableBase<tblMateriaRow> {
             
-            private global::System.Data.DataColumn columnId;
+            private global::System.Data.DataColumn columnID;
             
             private global::System.Data.DataColumn columnNOME_MATERIA;
             
@@ -664,9 +655,9 @@ namespace ControleFaculdade {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn IdColumn {
+            public global::System.Data.DataColumn IDColumn {
                 get {
-                    return this.columnId;
+                    return this.columnID;
                 }
             }
             
@@ -715,10 +706,10 @@ namespace ControleFaculdade {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tblMateriaRow AddtblMateriaRow(int Id, string NOME_MATERIA) {
+            public tblMateriaRow AddtblMateriaRow(int ID, string NOME_MATERIA) {
                 tblMateriaRow rowtblMateriaRow = ((tblMateriaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Id,
+                        ID,
                         NOME_MATERIA};
                 rowtblMateriaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtblMateriaRow);
@@ -727,9 +718,9 @@ namespace ControleFaculdade {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tblMateriaRow FindById(int Id) {
+            public tblMateriaRow FindByID(int ID) {
                 return ((tblMateriaRow)(this.Rows.Find(new object[] {
-                            Id})));
+                            ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -749,22 +740,22 @@ namespace ControleFaculdade {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnId = base.Columns["Id"];
+                this.columnID = base.Columns["ID"];
                 this.columnNOME_MATERIA = base.Columns["NOME_MATERIA"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId);
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
                 this.columnNOME_MATERIA = new global::System.Data.DataColumn("NOME_MATERIA", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNOME_MATERIA);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId}, true));
-                this.columnId.AllowDBNull = false;
-                this.columnId.Unique = true;
-                this.columnNOME_MATERIA.MaxLength = 30;
+                                this.columnID}, true));
+                this.columnID.AllowDBNull = false;
+                this.columnID.Unique = true;
+                this.columnNOME_MATERIA.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -832,7 +823,7 @@ namespace ControleFaculdade {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SampleDataBaseDataSet ds = new SampleDataBaseDataSet();
+                DBControleFaculdadeDataSet ds = new DBControleFaculdadeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -920,7 +911,12 @@ namespace ControleFaculdade {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string NOME_ATIVIDADE {
                 get {
-                    return ((string)(this[this.tabletblAtividade.NOME_ATIVIDADEColumn]));
+                    try {
+                        return ((string)(this[this.tabletblAtividade.NOME_ATIVIDADEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NOME_ATIVIDADE\' in table \'tblAtividade\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tabletblAtividade.NOME_ATIVIDADEColumn] = value;
@@ -957,6 +953,18 @@ namespace ControleFaculdade {
                 set {
                     this[this.tabletblAtividade.DATA_ENTREGAColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNOME_ATIVIDADENull() {
+                return this.IsNull(this.tabletblAtividade.NOME_ATIVIDADEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNOME_ATIVIDADENull() {
+                this[this.tabletblAtividade.NOME_ATIVIDADEColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1000,12 +1008,12 @@ namespace ControleFaculdade {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Id {
+            public int ID {
                 get {
-                    return ((int)(this[this.tabletblMateria.IdColumn]));
+                    return ((int)(this[this.tabletblMateria.IDColumn]));
                 }
                 set {
-                    this[this.tabletblMateria.IdColumn] = value;
+                    this[this.tabletblMateria.IDColumn] = value;
                 }
             }
             
@@ -1107,7 +1115,7 @@ namespace ControleFaculdade {
         }
     }
 }
-namespace ControleFaculdade.SampleDataBaseDataSetTableAdapters {
+namespace ControleFaculdade.DBControleFaculdadeDataSetTableAdapters {
     
     
     /// <summary>
@@ -1238,12 +1246,11 @@ namespace ControleFaculdade.SampleDataBaseDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tblAtividade] WHERE (([ID_MATERIA] = @Original_ID_MATERIA) AND" +
-                " ([NOME_ATIVIDADE] = @Original_NOME_ATIVIDADE) AND ((@IsNull_DATA_ENTREGA = 1 AN" +
-                "D [DATA_ENTREGA] IS NULL) OR ([DATA_ENTREGA] = @Original_DATA_ENTREGA)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tblAtividade] WHERE (([ID_MATERIA] = @Original_ID_MATERIA) AND ((@IsNull_NOME_ATIVIDADE = 1 AND [NOME_ATIVIDADE] IS NULL) OR ([NOME_ATIVIDADE] = @Original_NOME_ATIVIDADE)) AND ((@IsNull_DATA_ENTREGA = 1 AND [DATA_ENTREGA] IS NULL) OR ([DATA_ENTREGA] = @Original_DATA_ENTREGA)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_MATERIA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_MATERIA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NOME_ATIVIDADE", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_ATIVIDADE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_NOME_ATIVIDADE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_ATIVIDADE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NOME_ATIVIDADE", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_ATIVIDADE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DATA_ENTREGA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA_ENTREGA", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DATA_ENTREGA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA_ENTREGA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
@@ -1252,20 +1259,21 @@ namespace ControleFaculdade.SampleDataBaseDataSetTableAdapters {
 SELECT ID_MATERIA, NOME_ATIVIDADE, DESC_ATIVIDADE, DATA_ENTREGA FROM tblAtividade WHERE (ID_MATERIA = @ID_MATERIA)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_MATERIA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_MATERIA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME_ATIVIDADE", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_ATIVIDADE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DESC_ATIVIDADE", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESC_ATIVIDADE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME_ATIVIDADE", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_ATIVIDADE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DESC_ATIVIDADE", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESC_ATIVIDADE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA_ENTREGA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA_ENTREGA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tblAtividade] SET [ID_MATERIA] = @ID_MATERIA, [NOME_ATIVIDADE] = @NOME_ATIVIDADE, [DESC_ATIVIDADE] = @DESC_ATIVIDADE, [DATA_ENTREGA] = @DATA_ENTREGA WHERE (([ID_MATERIA] = @Original_ID_MATERIA) AND ([NOME_ATIVIDADE] = @Original_NOME_ATIVIDADE) AND ((@IsNull_DATA_ENTREGA = 1 AND [DATA_ENTREGA] IS NULL) OR ([DATA_ENTREGA] = @Original_DATA_ENTREGA)));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tblAtividade] SET [ID_MATERIA] = @ID_MATERIA, [NOME_ATIVIDADE] = @NOME_ATIVIDADE, [DESC_ATIVIDADE] = @DESC_ATIVIDADE, [DATA_ENTREGA] = @DATA_ENTREGA WHERE (([ID_MATERIA] = @Original_ID_MATERIA) AND ((@IsNull_NOME_ATIVIDADE = 1 AND [NOME_ATIVIDADE] IS NULL) OR ([NOME_ATIVIDADE] = @Original_NOME_ATIVIDADE)) AND ((@IsNull_DATA_ENTREGA = 1 AND [DATA_ENTREGA] IS NULL) OR ([DATA_ENTREGA] = @Original_DATA_ENTREGA)));
 SELECT ID_MATERIA, NOME_ATIVIDADE, DESC_ATIVIDADE, DATA_ENTREGA FROM tblAtividade WHERE (ID_MATERIA = @ID_MATERIA)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_MATERIA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_MATERIA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME_ATIVIDADE", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_ATIVIDADE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DESC_ATIVIDADE", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESC_ATIVIDADE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME_ATIVIDADE", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_ATIVIDADE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DESC_ATIVIDADE", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESC_ATIVIDADE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA_ENTREGA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA_ENTREGA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_MATERIA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_MATERIA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NOME_ATIVIDADE", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_ATIVIDADE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_NOME_ATIVIDADE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_ATIVIDADE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NOME_ATIVIDADE", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_ATIVIDADE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DATA_ENTREGA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA_ENTREGA", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DATA_ENTREGA", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA_ENTREGA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
@@ -1274,7 +1282,7 @@ SELECT ID_MATERIA, NOME_ATIVIDADE, DESC_ATIVIDADE, DATA_ENTREGA FROM tblAtividad
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ControleFaculdade.Properties.Settings.Default.SampleDataBaseConnectionString;
+            this._connection.ConnectionString = global::ControleFaculdade.Properties.Settings.Default.DBControleFaculdadeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1292,7 +1300,7 @@ SELECT ID_MATERIA, NOME_ATIVIDADE, DESC_ATIVIDADE, DATA_ENTREGA FROM tblAtividad
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SampleDataBaseDataSet.tblAtividadeDataTable dataTable) {
+        public virtual int Fill(DBControleFaculdadeDataSet.tblAtividadeDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1305,9 +1313,9 @@ SELECT ID_MATERIA, NOME_ATIVIDADE, DESC_ATIVIDADE, DATA_ENTREGA FROM tblAtividad
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SampleDataBaseDataSet.tblAtividadeDataTable GetData() {
+        public virtual DBControleFaculdadeDataSet.tblAtividadeDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SampleDataBaseDataSet.tblAtividadeDataTable dataTable = new SampleDataBaseDataSet.tblAtividadeDataTable();
+            DBControleFaculdadeDataSet.tblAtividadeDataTable dataTable = new DBControleFaculdadeDataSet.tblAtividadeDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1315,14 +1323,14 @@ SELECT ID_MATERIA, NOME_ATIVIDADE, DESC_ATIVIDADE, DATA_ENTREGA FROM tblAtividad
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SampleDataBaseDataSet.tblAtividadeDataTable dataTable) {
+        public virtual int Update(DBControleFaculdadeDataSet.tblAtividadeDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SampleDataBaseDataSet dataSet) {
+        public virtual int Update(DBControleFaculdadeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "tblAtividade");
         }
         
@@ -1348,18 +1356,20 @@ SELECT ID_MATERIA, NOME_ATIVIDADE, DESC_ATIVIDADE, DATA_ENTREGA FROM tblAtividad
         public virtual int Delete(int Original_ID_MATERIA, string Original_NOME_ATIVIDADE, global::System.Nullable<global::System.DateTime> Original_DATA_ENTREGA) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_MATERIA));
             if ((Original_NOME_ATIVIDADE == null)) {
-                throw new global::System.ArgumentNullException("Original_NOME_ATIVIDADE");
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_NOME_ATIVIDADE));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_NOME_ATIVIDADE));
             }
             if ((Original_DATA_ENTREGA.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_DATA_ENTREGA.Value));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_DATA_ENTREGA.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1384,7 +1394,7 @@ SELECT ID_MATERIA, NOME_ATIVIDADE, DESC_ATIVIDADE, DATA_ENTREGA FROM tblAtividad
         public virtual int Insert(int ID_MATERIA, string NOME_ATIVIDADE, string DESC_ATIVIDADE, global::System.Nullable<global::System.DateTime> DATA_ENTREGA) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID_MATERIA));
             if ((NOME_ATIVIDADE == null)) {
-                throw new global::System.ArgumentNullException("NOME_ATIVIDADE");
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(NOME_ATIVIDADE));
@@ -1424,7 +1434,7 @@ SELECT ID_MATERIA, NOME_ATIVIDADE, DESC_ATIVIDADE, DATA_ENTREGA FROM tblAtividad
         public virtual int Update(int ID_MATERIA, string NOME_ATIVIDADE, string DESC_ATIVIDADE, global::System.Nullable<global::System.DateTime> DATA_ENTREGA, int Original_ID_MATERIA, string Original_NOME_ATIVIDADE, global::System.Nullable<global::System.DateTime> Original_DATA_ENTREGA) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID_MATERIA));
             if ((NOME_ATIVIDADE == null)) {
-                throw new global::System.ArgumentNullException("NOME_ATIVIDADE");
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(NOME_ATIVIDADE));
@@ -1443,18 +1453,20 @@ SELECT ID_MATERIA, NOME_ATIVIDADE, DESC_ATIVIDADE, DATA_ENTREGA FROM tblAtividad
             }
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_ID_MATERIA));
             if ((Original_NOME_ATIVIDADE == null)) {
-                throw new global::System.ArgumentNullException("Original_NOME_ATIVIDADE");
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_NOME_ATIVIDADE));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_NOME_ATIVIDADE));
             }
             if ((Original_DATA_ENTREGA.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_DATA_ENTREGA.Value));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_DATA_ENTREGA.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1602,42 +1614,42 @@ SELECT ID_MATERIA, NOME_ATIVIDADE, DESC_ATIVIDADE, DATA_ENTREGA FROM tblAtividad
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "tblMateria";
-            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("NOME_MATERIA", "NOME_MATERIA");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tblMateria] WHERE (([Id] = @Original_Id) AND ((@IsNull_NOME_MA" +
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tblMateria] WHERE (([ID] = @Original_ID) AND ((@IsNull_NOME_MA" +
                 "TERIA = 1 AND [NOME_MATERIA] IS NULL) OR ([NOME_MATERIA] = @Original_NOME_MATERI" +
                 "A)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_NOME_MATERIA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_MATERIA", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NOME_MATERIA", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_MATERIA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NOME_MATERIA", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_MATERIA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tblMateria] ([Id], [NOME_MATERIA]) VALUES (@Id, @NOME_MATERIA)" +
-                ";\r\nSELECT Id, NOME_MATERIA FROM tblMateria WHERE (Id = @Id)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tblMateria] ([ID], [NOME_MATERIA]) VALUES (@ID, @NOME_MATERIA)" +
+                ";\r\nSELECT ID, NOME_MATERIA FROM tblMateria WHERE (ID = @ID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME_MATERIA", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_MATERIA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME_MATERIA", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_MATERIA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tblMateria] SET [Id] = @Id, [NOME_MATERIA] = @NOME_MATERIA WHERE (([Id] = @Original_Id) AND ((@IsNull_NOME_MATERIA = 1 AND [NOME_MATERIA] IS NULL) OR ([NOME_MATERIA] = @Original_NOME_MATERIA)));
-SELECT Id, NOME_MATERIA FROM tblMateria WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tblMateria] SET [ID] = @ID, [NOME_MATERIA] = @NOME_MATERIA WHERE (([ID] = @Original_ID) AND ((@IsNull_NOME_MATERIA = 1 AND [NOME_MATERIA] IS NULL) OR ([NOME_MATERIA] = @Original_NOME_MATERIA)));
+SELECT ID, NOME_MATERIA FROM tblMateria WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME_MATERIA", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_MATERIA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME_MATERIA", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_MATERIA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_NOME_MATERIA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_MATERIA", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NOME_MATERIA", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_MATERIA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NOME_MATERIA", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_MATERIA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ControleFaculdade.Properties.Settings.Default.SampleDataBaseConnectionString;
+            this._connection.ConnectionString = global::ControleFaculdade.Properties.Settings.Default.DBControleFaculdadeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1646,7 +1658,7 @@ SELECT Id, NOME_MATERIA FROM tblMateria WHERE (Id = @Id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, NOME_MATERIA FROM dbo.tblMateria";
+            this._commandCollection[0].CommandText = "SELECT ID, NOME_MATERIA FROM dbo.tblMateria";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1654,7 +1666,7 @@ SELECT Id, NOME_MATERIA FROM tblMateria WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SampleDataBaseDataSet.tblMateriaDataTable dataTable) {
+        public virtual int Fill(DBControleFaculdadeDataSet.tblMateriaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1667,9 +1679,9 @@ SELECT Id, NOME_MATERIA FROM tblMateria WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SampleDataBaseDataSet.tblMateriaDataTable GetData() {
+        public virtual DBControleFaculdadeDataSet.tblMateriaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SampleDataBaseDataSet.tblMateriaDataTable dataTable = new SampleDataBaseDataSet.tblMateriaDataTable();
+            DBControleFaculdadeDataSet.tblMateriaDataTable dataTable = new DBControleFaculdadeDataSet.tblMateriaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1677,14 +1689,14 @@ SELECT Id, NOME_MATERIA FROM tblMateria WHERE (Id = @Id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SampleDataBaseDataSet.tblMateriaDataTable dataTable) {
+        public virtual int Update(DBControleFaculdadeDataSet.tblMateriaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SampleDataBaseDataSet dataSet) {
+        public virtual int Update(DBControleFaculdadeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "tblMateria");
         }
         
@@ -1707,8 +1719,8 @@ SELECT Id, NOME_MATERIA FROM tblMateria WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_NOME_MATERIA) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
+        public virtual int Delete(int Original_ID, string Original_NOME_MATERIA) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
             if ((Original_NOME_MATERIA == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -1737,8 +1749,8 @@ SELECT Id, NOME_MATERIA FROM tblMateria WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id, string NOME_MATERIA) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
+        public virtual int Insert(int ID, string NOME_MATERIA) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
             if ((NOME_MATERIA == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -1765,15 +1777,15 @@ SELECT Id, NOME_MATERIA FROM tblMateria WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Id, string NOME_MATERIA, int Original_Id, string Original_NOME_MATERIA) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id));
+        public virtual int Update(int ID, string NOME_MATERIA, int Original_ID, string Original_NOME_MATERIA) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID));
             if ((NOME_MATERIA == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(NOME_MATERIA));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_Id));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ID));
             if ((Original_NOME_MATERIA == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
@@ -1802,8 +1814,8 @@ SELECT Id, NOME_MATERIA FROM tblMateria WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string NOME_MATERIA, int Original_Id, string Original_NOME_MATERIA) {
-            return this.Update(Original_Id, NOME_MATERIA, Original_Id, Original_NOME_MATERIA);
+        public virtual int Update(string NOME_MATERIA, int Original_ID, string Original_NOME_MATERIA) {
+            return this.Update(Original_ID, NOME_MATERIA, Original_ID, Original_NOME_MATERIA);
         }
     }
     
@@ -1921,23 +1933,23 @@ SELECT Id, NOME_MATERIA FROM tblMateria WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(SampleDataBaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DBControleFaculdadeDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._tblMateriaTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tblMateria.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tblMateriaTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._tblAtividadeTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.tblAtividade.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._tblAtividadeTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tblMateriaTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tblMateria.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tblMateriaTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1949,21 +1961,21 @@ SELECT Id, NOME_MATERIA FROM tblMateria WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(SampleDataBaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DBControleFaculdadeDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._tblMateriaTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tblMateria.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tblMateriaTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._tblAtividadeTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.tblAtividade.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._tblAtividadeTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tblMateriaTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tblMateria.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tblMateriaTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1975,21 +1987,21 @@ SELECT Id, NOME_MATERIA FROM tblMateria WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(SampleDataBaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DBControleFaculdadeDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._tblAtividadeTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tblAtividade.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tblAtividadeTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._tblMateriaTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.tblMateria.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._tblMateriaTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tblAtividadeTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tblAtividade.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tblAtividadeTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -2025,7 +2037,7 @@ SELECT Id, NOME_MATERIA FROM tblMateria WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(SampleDataBaseDataSet dataSet) {
+        public virtual int UpdateAll(DBControleFaculdadeDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

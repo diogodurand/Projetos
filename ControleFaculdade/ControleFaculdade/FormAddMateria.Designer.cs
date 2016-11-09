@@ -32,6 +32,7 @@
             this.txtNomeDaMateria = new System.Windows.Forms.TextBox();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
+            this.txtResultado = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNomeDaMateria
@@ -70,11 +71,20 @@
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
+            // txtResultado
+            // 
+            this.txtResultado.AutoSize = true;
+            this.txtResultado.Location = new System.Drawing.Point(164, 128);
+            this.txtResultado.Name = "txtResultado";
+            this.txtResultado.Size = new System.Drawing.Size(0, 13);
+            this.txtResultado.TabIndex = 4;
+            // 
             // FormAddMateria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 293);
+            this.Controls.Add(this.txtResultado);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.txtNomeDaMateria);
@@ -93,5 +103,6 @@
         private System.Windows.Forms.TextBox txtNomeDaMateria;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.Label txtResultado;
     }
 }
