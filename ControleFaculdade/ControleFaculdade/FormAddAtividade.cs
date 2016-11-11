@@ -20,7 +20,7 @@ namespace ControleFaculdade
         public string dataEntrega;
         public int idMateria;
         string sql;
-        StringBuilder errorMessages = new StringBuilder();
+        
 
         public FormAddAtividade(FormADD FormAdd)
         {

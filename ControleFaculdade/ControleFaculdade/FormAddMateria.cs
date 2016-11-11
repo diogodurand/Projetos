@@ -14,9 +14,11 @@ namespace ControleFaculdade
     public partial class FormAddMateria : Form
     {
         public FormADD formAdd;
+        public FormHome formHome;
         BD BD = new BD();
         SqlDataReader leitor;
         public string nomeMateria;
+        
 
 
         public FormAddMateria(FormADD FormAdd)
@@ -32,9 +34,7 @@ namespace ControleFaculdade
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-
-            txtResultado.Text = "Processando...";
-                
+            FormAddMateria formAddMateria = new FormAddMateria();
             int ultimoId;
             nomeMateria = txtNomeDaMateria.Text.ToString();
             string sql;
@@ -52,16 +52,17 @@ namespace ControleFaculdade
             sql = "insert into tblMateria"
                   + " (ID, NOME_MATERIA)"
                   + " values ("+( ultimoId +1) +", '"+ nomeMateria + "')";
-            BD.Insert(sql);
+            
+            MessageBox.Show(BD.Insert(sql));
 
-            txtResultado.Text = "Insert Realizado com Sucesso!";
+            formAddMateria.Close();
 
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            this.formAdd.Show();
             FormAddMateria formAddMateria = new FormAddMateria();
+            this.formAdd.Show();
             formAddMateria.Close();
         }
     }

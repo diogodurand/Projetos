@@ -53,7 +53,7 @@
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(401, 258);
+            this.btnVoltar.Location = new System.Drawing.Point(401, 123);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(75, 23);
             this.btnVoltar.TabIndex = 2;
@@ -63,7 +63,7 @@
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(320, 258);
+            this.btnOk.Location = new System.Drawing.Point(320, 123);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
             this.btnOk.TabIndex = 3;
@@ -83,7 +83,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 293);
+            this.ClientSize = new System.Drawing.Size(488, 159);
             this.Controls.Add(this.txtResultado);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnVoltar);

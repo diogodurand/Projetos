@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Text;
 using System.Windows.Forms;
@@ -13,6 +14,7 @@ namespace ControleFaculdade
         public string stringConnection;
         public static SqlConnection bdConn;
         public SqlCommand command;
+        
         StringBuilder errorMessages = new StringBuilder();
         SqlDataReader retorno;
         
@@ -48,6 +50,8 @@ namespace ControleFaculdade
             }
 
         }
+
+        
 
         public string Update(string sql)
         {
@@ -138,6 +142,8 @@ namespace ControleFaculdade
             }
 
         }
+        
+
 
         public void CloseConnection()
         {
@@ -163,7 +169,7 @@ namespace ControleFaculdade
                 Console.WriteLine(errorMessages.ToString());
             }
         }
-
+        
 
     }
 }

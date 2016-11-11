@@ -17,7 +17,7 @@ namespace ControleFaculdade
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
                        
-            Application.Run(new FormAddMateria());
+            Application.Run(new FormHome());
         }
 
     }

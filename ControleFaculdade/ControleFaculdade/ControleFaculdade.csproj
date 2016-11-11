@@ -62,6 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BD.cs" />
+    <Compile Include="DBControleFaculdadeDataSet.cs">
+      <DependentUpon>DBControleFaculdadeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DBControleFaculdadeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -91,6 +94,12 @@
     <Compile Include="FormAddMateria.Designer.cs">
       <DependentUpon>FormAddMateria.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHome.Designer.cs">
+      <DependentUpon>FormHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormListarAtividades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddMateria.resx">
       <DependentUpon>FormAddMateria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHome.resx">
+      <DependentUpon>FormHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormListarAtividades.resx">
       <DependentUpon>FormListarAtividades.cs</DependentUpon>
